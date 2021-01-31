@@ -15,21 +15,21 @@
         "connections": [
             {
                 "from": [
-                    "run_model",
-                    "right"
-                ],
-                "to": [
-                    "NordicHydroResults",
-                    "left"
-                ]
-            },
-            {
-                "from": [
                     "NordicHydro",
                     "right"
                 ],
                 "to": [
                     "run_model",
+                    "left"
+                ]
+            },
+            {
+                "from": [
+                    "run_model",
+                    "right"
+                ],
+                "to": [
+                    "NordicHydroResults",
                     "left"
                 ]
             }
@@ -77,7 +77,7 @@
         "run_model": {
             "type": "Tool",
             "description": "",
-            "x": 9.869032429819235,
+            "x": 8.860811383595532,
             "y": -4.556514539851904,
             "specification": "call_run_spinemodel",
             "execute_in_work": true,
