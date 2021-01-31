@@ -1,0 +1,14 @@
+{
+    "name": "call_run_spinemodel",
+    "tooltype": "julia",
+    "includes": [
+        "call_run_spinemodel.jl"
+    ],
+    "description": "",
+    "inputfiles": [],
+    "inputfiles_opt": [],
+    "outputfiles": [],
+    "cmdline_args": [],
+    "execute_in_work": true,
+    "includes_main_path": "/Users/iasonas/Desktop/Nordic Hydro Model/SpineProj"
+}

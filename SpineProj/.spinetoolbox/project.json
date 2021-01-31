@@ -1,0 +1,98 @@
+{
+    "project": {
+        "version": 5,
+        "name": "SpineProj",
+        "description": "",
+        "specifications": {
+            "Tool": [
+                {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/specifications/Tool/call_run_spinemodel.json"
+                }
+            ]
+        },
+        "connections": [
+            {
+                "from": [
+                    "run_model",
+                    "right"
+                ],
+                "to": [
+                    "NordicHydroResults",
+                    "left"
+                ]
+            },
+            {
+                "from": [
+                    "NordicHydro",
+                    "right"
+                ],
+                "to": [
+                    "run_model",
+                    "left"
+                ]
+            }
+        ]
+    },
+    "items": {
+        "NordicHydro": {
+            "type": "Data Store",
+            "description": "",
+            "x": -195.68403557591412,
+            "y": -14.157945414584503,
+            "url": {
+                "dialect": "sqlite",
+                "username": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/items/nordichydro/spillcost.sqlite"
+                }
+            },
+            "cancel_on_error": true
+        },
+        "NordicHydroResults": {
+            "type": "Data Store",
+            "description": "",
+            "x": 176.75434807591412,
+            "y": 14.157945414584503,
+            "url": {
+                "dialect": "sqlite",
+                "username": "",
+                "password": "",
+                "host": "",
+                "port": "",
+                "database": {
+                    "type": "path",
+                    "relative": true,
+                    "path": ".spinetoolbox/items/nordichydroresults/NordicHydroResults.sqlite"
+                }
+            },
+            "cancel_on_error": true
+        },
+        "run_model": {
+            "type": "Tool",
+            "description": "",
+            "x": 9.869032429819235,
+            "y": -4.556514539851904,
+            "specification": "call_run_spinemodel",
+            "execute_in_work": true,
+            "cmd_line_args": [
+                {
+                    "type": "path",
+                    "relative": false,
+                    "path": "{db_url@NordicHydro}"
+                },
+                {
+                    "type": "path",
+                    "relative": false,
+                    "path": "{db_url@NordicHydroResults}"
+                }
+            ]
+        }
+    }
+}
