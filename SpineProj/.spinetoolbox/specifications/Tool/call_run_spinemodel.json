@@ -10,5 +10,5 @@
     "outputfiles": [],
     "cmdline_args": [],
     "execute_in_work": true,
-    "includes_main_path": "/Path/to/nordic-hydro-spineopt/SpineProj/call_run_spinemodel.jl"
+    "includes_main_path": "../../.."
 }
