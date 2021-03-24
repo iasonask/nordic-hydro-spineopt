@@ -1,6 +1,6 @@
 {
     "project": {
-        "version": 5,
+        "version": 6,
         "name": "SpineProj",
         "description": "",
         "specifications": {
@@ -83,14 +83,12 @@
             "execute_in_work": true,
             "cmd_line_args": [
                 {
-                    "type": "path",
-                    "relative": false,
-                    "path": "{db_url@NordicHydro}"
+                    "type": "resource",
+                    "arg": "db_url@NordicHydro"
                 },
                 {
-                    "type": "path",
-                    "relative": false,
-                    "path": "{db_url@NordicHydroResults}"
+                    "type": "resource",
+                    "arg": "db_url@NordicHydroResults"
                 }
             ]
         }
